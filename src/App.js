@@ -3,18 +3,11 @@ import React from 'react';
 import backgroundImage from "./images/project-summit-modal.png";
 import closeModalImage from "./images/close-modal-btn.png";
 import chevronDown from "./images/chevron-down.png";
+import ReadMore from './components/Readmore';
 
 const headline = 'Lorem Ipsum';
+const body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... do eiusmod tempor incididunt ut labore et dolore magna."
 
-// function App() {
-//   return (
-//     <div className="Modal-container">
-//       <div>
-//         <h2>{headline}</h2>
-//       </div>
-//     </div>
-//   );
-// }
 
 class App extends React.Component {
   render() {
@@ -22,11 +15,9 @@ class App extends React.Component {
       <div className='ImageContainer' style={imageContainerStyle}>
         <img src={closeModalImage} style={closeModalImageStyle}></img>
       </div>
-      <div className='ModalContent' style={modalContentStyle}>      <h2 >Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</p>
+      <div className='ModalContent' style={modalContentStyle}>      <h2 >{headline}</h2>
+        <ReadMore>{body}</ReadMore>
 
-        <div className='readMoreContainer' style={readMoreContainerStyle}>
-          <p style={readMoreStyle}>Read More</p><img src={chevronDown} style={{ height: '10px', paddingLeft: '10px' }}></img></div>
         <button style={modalBtn}>Details Here</button>
       </div>
 
